@@ -2,11 +2,14 @@
 pragma solidity ^0.8.13;
 
 contract TripleNestedMapping {
+    // (string(_name) => uint256(_password) => uint256(_pin) => bool).
+    //      name              password          pin         bool
+    mapping(string => mapping(uint256 => mapping(uint256 => bool))) public isLoggedIn;
     /* 
         This exercise assumes you know how mappings work.
         1. Create a public TRIPLE nested mapping of 
-           (string(_name) => uint256(_password) => uint256(_pin) => bool).
-        2. The name of the mapping must be `isLoggedIn` and it should be public.
+           (string(_name) => uint256(_password) => uint256(_pin) => bool). - done
+        2. The name of the mapping must be `isLoggedIn` and it should be public. - done 
         3. Set the boolean value of the arguments to `true` in the 'setLogin' function.
     */
 
@@ -15,6 +18,6 @@ contract TripleNestedMapping {
         uint256 _password,
         uint256 _pin
     ) public {
-        // your code here
+        isLoggedIn[_name][_password][_pin] = true;
     }
 }

@@ -1,3 +1,6 @@
+# Note
+I did these challenges to brush up on some Solidity basics. Please see the original readme content below.
+
 # Solidity Exercises
 
 This is a set of exercises accompanies the RareSkills [learn solidity](https://rareskills.io/learn-solidity) tutorial so you can learn Solidity by doing bite-sized exercises. It's intended for experienced programmers who want to get the the point quickly and immediately practice what they learn.
