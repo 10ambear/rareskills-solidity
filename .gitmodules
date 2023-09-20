@@ -3,3 +3,6 @@
 [submodule "PracticeProblems/lib/forge-std"]
 	path = PracticeProblems/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "TokenExchangeMiniProject/lib/forge-std"]
+	path = TokenExchangeMiniProject/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
