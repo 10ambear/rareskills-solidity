@@ -10,8 +10,13 @@ contract BlockNumber {
      */
 
     address public lastCaller;
+    uint256 public savedBlockNumber; 
 
     function callMe() external {
+        savedBlockNumber = block.number;
         /// your code here
+        if(block.number > savedBlockNumber){
+                revert("can only call this once per block");
+        }
     }
 }

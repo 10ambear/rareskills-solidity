@@ -13,7 +13,20 @@ contract DistributeV2 {
 
     constructor() payable {}
 
-    function distributeEther(address[] memory addresses) public {
-        // your code here
+function distributeEther(address[] memory addresses) public {
+    uint256 contractBalance = address(this).balance; 
+    uint256 arrLen = addresses.length;
+    uint256 etherToSend = contractBalance / arrLen;
+
+    for (uint i = 0; i < arrLen; i++) {
+        // Try to send ether to the address
+        (bool success,) = addresses[i].call{value: etherToSend}("");
+        
+        // If the call fails, continue to the next address
+        if (!success) {
+            continue;
+        }
     }
+}
+
 }
