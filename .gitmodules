@@ -6,3 +6,6 @@
 [submodule "TokenExchangeMiniProject/lib/forge-std"]
 	path = TokenExchangeMiniProject/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "SimpleNft/lib/forge-std"]
+	path = SimpleNft/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
